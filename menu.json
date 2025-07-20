@@ -1,0 +1,123 @@
+{
+  "categories": [
+    {
+      "title": "Κρεατικά",
+      "items": [
+        { "name": "Σουβλάκι", "price": 1.8, "slug": "souvlaki" },
+        { "name": "Σουτζουκάκι", "price": 1.8, "slug": "soutzoukaki" },
+        { "name": "Κοτοσουβλάκι", "price": 2, "slug": "kotosouvlaki" },
+        { "name": "Πανσέτα", "price": 1.8, "slug": "panseta" },
+        { "name": "Μπριζολάκι χοιρινό", "price": 2, "slug": "brizolaki-xoirino" },
+        { "name": "Λουκάνικο Τζουμαγιάς", "price": 1.7, "slug": "loukaniko-tzoumagias" },
+        { "name": "Κοτόπουλο σχάρας ολόκληρο", "price": 14, "slug": "kotopoulo-sxaras-olokliro" },
+        { "name": "Κοτόπουλο σχάρας 1/2", "price": 7.5, "slug": "kotopoulo-sxaras-miso" }
+      ]
+    },
+    {
+      "title": "Ορεκτικά",
+      "items": [
+        { "name": "Κολοκυθάκια τηγανητά", "price": 4, "slug": "kolokythakia-tiganita" },
+        { "name": "Μελιτζάνα ψητή", "price": 4.2, "slug": "melitzana-psiti" },
+        { "name": "Φλωρίνης γεμιστή", "price": 3, "slug": "florinis-gemisti" },
+        { "name": "Καλαμαράκια τηγανητά", "price": 8.5, "slug": "kalamarakia-tiganita" },
+        { "name": "Σκουμπρί", "price": 4, "slug": "skoumpri" },
+        { "name": "Φέτα", "price": 3, "slug": "feta" },
+        { "name": "Φέτα ψητή", "price": 3.4, "slug": "feta-psiti" },
+        { "name": "Φέτα μπόμπα", "price": 3.5, "slug": "feta-bomba" },
+        { "name": "Κασεροκροκέτες", "price": 3.8, "slug": "kaserokroketes" },
+        { "name": "Πατάτα τηγανητή", "price": 3.5, "slug": "patata-tiganiti" },
+        { "name": "Πατάτα σουφλέ", "price": 4.2, "slug": "patata-soufle" },
+        { "name": "Πιπεριές μπακάλικες", "price": 3.4, "slug": "piperies-bakaliikes" },
+        { "name": "Τζατζίκι", "price": 3, "slug": "tzatziki" },
+        { "name": "Τυροκαυτερή", "price": 3.4, "slug": "tyrokayteri" },
+        { "name": "Πάπρικα", "price": 3.5, "slug": "paprika" },
+        { "name": "Καυτερή πιπεριά", "price": 1.5, "slug": "kayteri-piperia" },
+        { "name": "Ψωμί", "price": 0.6, "slug": "psomi" },
+        { "name": "Λαδόπιτα", "price": 0.6, "slug": "ladopita" }
+      ]
+    },
+    {
+      "title": "Σαλάτες",
+      "items": [
+        { "name": "Αγγουροντομάτα", "price": 3.8, "slug": "aggourodomata" },
+        { "name": "Πικάντικη", "price": 3.4, "slug": "pikantiki" },
+        { "name": "Χωριάτικη", "price": 5.8, "slug": "xoriatiki" },
+        { "name": "Ρόκα - Μαρούλι", "price": 6, "slug": "roka-marouli" },
+        { "name": "Παντζάρι", "price": 4, "slug": "pantzari" },
+        { "name": "Χόρτα", "price": 4.2, "slug": "xorta" }
+      ]
+    },
+    {
+      "title": "Μπύρες (500ml)",
+      "items": [
+        { "name": "Amstel", "price": 3.5, "slug": "amstel" },
+        { "name": "Amstel Radler", "price": 3.5, "slug": "amstel-radler" },
+        { "name": "Άλφα", "price": 3.5, "slug": "alfa" },
+        { "name": "Μύθος", "price": 3.5, "slug": "mythos" },
+        { "name": "Νήσος", "price": 3.5, "slug": "nisos" },
+        { "name": "Heineken", "price": 3.5, "slug": "heineken" },
+        { "name": "Kaiser", "price": 3.7, "slug": "kaiser" },
+        { "name": "Fischer", "price": 3.5, "slug": "fischer" },
+        { "name": "Βεργίνα", "price": 3.5, "slug": "vergina" },
+        { "name": "Έζα", "price": 3.5, "slug": "eza" },
+        { "name": "Κουτί 330ml", "price": 2, "slug": "kouti-330ml" }
+      ]
+    },
+    {
+      "title": "Αναψυκτικά",
+      "items": [
+        { "name": "Cola Βίκος", "price": 1.7, "slug": "cola-vikos" },
+        { "name": "Cola Νέκταρ", "price": 1.7, "slug": "cola-nektar" },
+        { "name": "Πορτοκαλάδα", "price": 1.7, "slug": "portokalada" },
+        { "name": "Λεμονάδα", "price": 1.7, "slug": "lemonada" },
+        { "name": "Γκαζόζα", "price": 1.7, "slug": "gazoza" },
+        { "name": "Σόδα", "price": 1.7, "slug": "soda" },
+        { "name": "Χυμός ανάμεικτος", "price": 1.2, "slug": "xymos-anameiktos" },
+        { "name": "Νερό 1lt", "price": 1, "slug": "nero-1lt" }
+      ]
+    },
+    {
+      "title": "Τσίπουρο (200ml)",
+      "items": [
+        { "name": "Ηδωνικό", "price": 8, "slug": "idoniko" },
+        { "name": "Μπαμπατζίμ", "price": 8, "slug": "babatzim" },
+        { "name": "Αποστολάκη", "price": 8, "slug": "apostolaki" },
+        { "name": "Δεκαράκι", "price": 8, "slug": "dekaraki" },
+        { "name": "Χύμα 200ml", "price": 8, "slug": "xyma-200ml" }
+      ]
+    },
+    {
+      "title": "Ούζο (200ml)",
+      "items": [
+        { "name": "Απόσταγμα Πεντάρι", "price": 7.5, "slug": "apostagma-pentari" },
+        { "name": "Απόσταγμα Αλεξανδρίδη", "price": 7.5, "slug": "apostagma-aleksandridi" },
+        { "name": "Αλεξανδρίδη", "price": 6.5, "slug": "aleksandridi" },
+        { "name": "Μαγεία", "price": 6.5, "slug": "mageia" },
+        { "name": "Κουλάς", "price": 6.5, "slug": "koulas" },
+        { "name": "Πεντάρι", "price": 6.5, "slug": "pentari" },
+        { "name": "Φραγκούλα", "price": 6.5, "slug": "fragkoula" },
+        { "name": "Ούζο 50ml", "price": 2, "slug": "ouzo-50ml" }
+      ]
+    },
+    {
+      "title": "Κρασί Χύμα (500ml)",
+      "items": [
+        { "name": "Λευκό Ξηρό", "price": 4, "slug": "lefko-ksiro" },
+        { "name": "Ροζέ Ξηρό", "price": 4, "slug": "roze-ksiro" },
+        { "name": "Κόκκινο Ξηρό", "price": 4, "slug": "kokkino-ksiro" },
+        { "name": "Κόκκινο Ημίγλυκο", "price": 4, "slug": "kokkino-imiglyko" },
+        { "name": "Κόκκινο Γλυκό", "price": 4, "slug": "kokkino-glyko" }
+      ]
+    },
+    {
+      "title": "Ρετσίνα (500ml)",
+      "items": [
+        { "name": "Άστρον", "price": 3.8, "slug": "astron" },
+        { "name": "Βασιλική", "price": 4.3, "slug": "vasiliki" },
+        { "name": "Μαλαματίνα", "price": 3.5, "slug": "malamatina" },
+        { "name": "Γεωργιάδη", "price": 3.5, "slug": "georgiadi" },
+        { "name": "Πούλιου", "price": 3.5, "slug": "pouliou" }
+      ]
+    }
+  ]
+} 

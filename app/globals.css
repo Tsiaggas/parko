@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ελληνική τυπογραφία */
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background-color: #fff8f5;
+}
+
+/* Προσαρμογή για ελληνικά */
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease;
+} 

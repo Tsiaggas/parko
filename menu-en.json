@@ -1,0 +1,123 @@
+{
+  "categories": [
+    {
+      "title": "Grilled Meats",
+      "items": [
+        { "name": "Souvlaki (Pork skewer)", "price": 1.8, "slug": "souvlaki" },
+        { "name": "Soutzoukaki (Spiced meatball)", "price": 1.8, "slug": "soutzoukaki" },
+        { "name": "Chicken Souvlaki", "price": 2, "slug": "kotosouvlaki" },
+        { "name": "Pancetta", "price": 1.8, "slug": "panseta" },
+        { "name": "Pork Chop", "price": 2, "slug": "brizolaki-xoirino" },
+        { "name": "Tzoumagias Sausage", "price": 1.7, "slug": "loukaniko-tzoumagias" },
+        { "name": "Whole Grilled Chicken", "price": 14, "slug": "kotopoulo-sxaras-olokliro" },
+        { "name": "Half Grilled Chicken", "price": 7.5, "slug": "kotopoulo-sxaras-miso" }
+      ]
+    },
+    {
+      "title": "Appetizers",
+      "items": [
+        { "name": "Fried Zucchini", "price": 4, "slug": "kolokythakia-tiganita" },
+        { "name": "Grilled Eggplant", "price": 4.2, "slug": "melitzana-psiti" },
+        { "name": "Stuffed Florina Pepper", "price": 3, "slug": "florinis-gemisti" },
+        { "name": "Fried Calamari", "price": 8.5, "slug": "kalamarakia-tiganita" },
+        { "name": "Mackerel", "price": 4, "slug": "skoumpri" },
+        { "name": "Feta Cheese", "price": 3, "slug": "feta" },
+        { "name": "Grilled Feta", "price": 3.4, "slug": "feta-psiti" },
+        { "name": "Feta Bomba", "price": 3.5, "slug": "feta-bomba" },
+        { "name": "Cheese Croquettes", "price": 3.8, "slug": "kaserokroketes" },
+        { "name": "French Fries", "price": 3.5, "slug": "patata-tiganiti" },
+        { "name": "Soufflé Potatoes", "price": 4.2, "slug": "patata-soufle" },
+        { "name": "Pickled Peppers", "price": 3.4, "slug": "piperies-bakaliikes" },
+        { "name": "Tzatziki", "price": 3, "slug": "tzatziki" },
+        { "name": "Spicy Cheese Dip", "price": 3.4, "slug": "tyrokayteri" },
+        { "name": "Paprika Dip", "price": 3.5, "slug": "paprika" },
+        { "name": "Hot Pepper", "price": 1.5, "slug": "kayteri-piperia" },
+        { "name": "Bread", "price": 0.6, "slug": "psomi" },
+        { "name": "Olive Oil Pie (Ladopita)", "price": 0.6, "slug": "ladopita" }
+      ]
+    },
+    {
+      "title": "Salads",
+      "items": [
+        { "name": "Cucumber & Tomato", "price": 3.8, "slug": "aggourodomata" },
+        { "name": "Spicy Salad", "price": 3.4, "slug": "pikantiki" },
+        { "name": "Greek Village Salad", "price": 5.8, "slug": "xoriatiki" },
+        { "name": "Arugula & Lettuce", "price": 6, "slug": "roka-marouli" },
+        { "name": "Beetroot Salad", "price": 4, "slug": "pantzari" },
+        { "name": "Wild Greens", "price": 4.2, "slug": "xorta" }
+      ]
+    },
+    {
+      "title": "Beers (500ml)",
+      "items": [
+        { "name": "Amstel", "price": 3.5, "slug": "amstel" },
+        { "name": "Amstel Radler", "price": 3.5, "slug": "amstel-radler" },
+        { "name": "Alfa", "price": 3.5, "slug": "alfa" },
+        { "name": "Mythos", "price": 3.5, "slug": "mythos" },
+        { "name": "Nisos", "price": 3.5, "slug": "nisos" },
+        { "name": "Heineken", "price": 3.5, "slug": "heineken" },
+        { "name": "Kaiser", "price": 3.7, "slug": "kaiser" },
+        { "name": "Fischer", "price": 3.5, "slug": "fischer" },
+        { "name": "Vergina", "price": 3.5, "slug": "vergina" },
+        { "name": "Eza", "price": 3.5, "slug": "eza" },
+        { "name": "Beer Can 330ml", "price": 2, "slug": "kouti-330ml" }
+      ]
+    },
+    {
+      "title": "Soft Drinks",
+      "items": [
+        { "name": "Cola Vikos", "price": 1.7, "slug": "cola-vikos" },
+        { "name": "Cola Nectar", "price": 1.7, "slug": "cola-nektar" },
+        { "name": "Orange Soda", "price": 1.7, "slug": "portokalada" },
+        { "name": "Lemon Soda", "price": 1.7, "slug": "lemonada" },
+        { "name": "Gazoza", "price": 1.7, "slug": "gazoza" },
+        { "name": "Soda Water", "price": 1.7, "slug": "soda" },
+        { "name": "Mixed Juice", "price": 1.2, "slug": "xymos-anameiktos" },
+        { "name": "Water 1L", "price": 1, "slug": "nero-1lt" }
+      ]
+    },
+    {
+      "title": "Tsipouro (200ml)",
+      "items": [
+        { "name": "Idoniko", "price": 8, "slug": "idoniko" },
+        { "name": "Babatzim", "price": 8, "slug": "babatzim" },
+        { "name": "Apostolaki", "price": 8, "slug": "apostolaki" },
+        { "name": "Dekaraki", "price": 8, "slug": "dekaraki" },
+        { "name": "House Tsipouro 200ml", "price": 8, "slug": "xyma-200ml" }
+      ]
+    },
+    {
+      "title": "Ouzo (200ml)",
+      "items": [
+        { "name": "Apostagma Pentari", "price": 7.5, "slug": "apostagma-pentari" },
+        { "name": "Apostagma Alexandridi", "price": 7.5, "slug": "apostagma-aleksandridi" },
+        { "name": "Alexandridi", "price": 6.5, "slug": "aleksandridi" },
+        { "name": "Mageia", "price": 6.5, "slug": "mageia" },
+        { "name": "Koulas", "price": 6.5, "slug": "koulas" },
+        { "name": "Pentari", "price": 6.5, "slug": "pentari" },
+        { "name": "Fragkoula", "price": 6.5, "slug": "fragkoula" },
+        { "name": "Ouzo 50ml", "price": 2, "slug": "ouzo-50ml" }
+      ]
+    },
+    {
+      "title": "House Wine (500ml)",
+      "items": [
+        { "name": "White Dry", "price": 4, "slug": "lefko-ksiro" },
+        { "name": "Rosé Dry", "price": 4, "slug": "roze-ksiro" },
+        { "name": "Red Dry", "price": 4, "slug": "kokkino-ksiro" },
+        { "name": "Red Semi-Sweet", "price": 4, "slug": "kokkino-imiglyko" },
+        { "name": "Red Sweet", "price": 4, "slug": "kokkino-glyko" }
+      ]
+    },
+    {
+      "title": "Retsina (500ml)",
+      "items": [
+        { "name": "Astron", "price": 3.8, "slug": "astron" },
+        { "name": "Vasiliki", "price": 4.3, "slug": "vasiliki" },
+        { "name": "Malamatina", "price": 3.5, "slug": "malamatina" },
+        { "name": "Georgiadi", "price": 3.5, "slug": "georgiadi" },
+        { "name": "Pouliou", "price": 3.5, "slug": "pouliou" }
+      ]
+    }
+  ]
+} 
