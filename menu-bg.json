@@ -46,6 +46,78 @@
         { "name": "Салата от цвекло", "price": 4, "slug": "pantzari" },
         { "name": "Дива зеленина", "price": 4.2, "slug": "xorta" }
       ]
+    },
+    {
+      "title": "Бира (500ml)",
+      "items": [
+        { "name": "Amstel", "price": 3.5, "slug": "amstel" },
+        { "name": "Amstel Radler", "price": 3.5, "slug": "amstel-radler" },
+        { "name": "Алфа", "price": 3.5, "slug": "alfa" },
+        { "name": "Митос", "price": 3.5, "slug": "mythos" },
+        { "name": "Нисос", "price": 3.5, "slug": "nisos" },
+        { "name": "Heineken", "price": 3.5, "slug": "heineken" },
+        { "name": "Kaiser", "price": 3.7, "slug": "kaiser" },
+        { "name": "Fischer", "price": 3.5, "slug": "fischer" },
+        { "name": "Вергина", "price": 3.5, "slug": "vergina" },
+        { "name": "Еза", "price": 3.5, "slug": "eza" },
+        { "name": "Кутия 330ml", "price": 2, "slug": "kouti-330ml" }
+      ]
+    },
+    {
+      "title": "Безалкохолни напитки",
+      "items": [
+        { "name": "Кола Викос", "price": 1.7, "slug": "cola-vikos" },
+        { "name": "Кола Нектар", "price": 1.7, "slug": "cola-nektar" },
+        { "name": "Портокалада", "price": 1.7, "slug": "portokalada" },
+        { "name": "Лимонада", "price": 1.7, "slug": "lemonada" },
+        { "name": "Газоза", "price": 1.7, "slug": "gazoza" },
+        { "name": "Сода", "price": 1.7, "slug": "soda" },
+        { "name": "Смесен сок", "price": 1.2, "slug": "xymos-anameiktos" },
+        { "name": "Вода 1л", "price": 1, "slug": "nero-1lt" }
+      ]
+    },
+    {
+      "title": "Ципуро (200ml)",
+      "items": [
+        { "name": "Идонико", "price": 8, "slug": "idoniko" },
+        { "name": "Бабацим", "price": 8, "slug": "babatzim" },
+        { "name": "Апостолаки", "price": 8, "slug": "apostolaki" },
+        { "name": "Декараки", "price": 8, "slug": "dekaraki" },
+        { "name": "Домашно ципуро 200ml", "price": 8, "slug": "xyma-200ml" }
+      ]
+    },
+    {
+      "title": "Узо (200ml)",
+      "items": [
+        { "name": "Апостагма Пентари", "price": 7.5, "slug": "apostagma-pentari" },
+        { "name": "Апостагма Александриди", "price": 7.5, "slug": "apostagma-aleksandridi" },
+        { "name": "Александриди", "price": 6.5, "slug": "aleksandridi" },
+        { "name": "Магея", "price": 6.5, "slug": "mageia" },
+        { "name": "Кулас", "price": 6.5, "slug": "koulas" },
+        { "name": "Пентари", "price": 6.5, "slug": "pentari" },
+        { "name": "Франгула", "price": 6.5, "slug": "fragkoula" },
+        { "name": "Узо 50ml", "price": 2, "slug": "ouzo-50ml" }
+      ]
+    },
+    {
+      "title": "Домашно вино (500ml)",
+      "items": [
+        { "name": "Бяло сухо", "price": 4, "slug": "lefko-ksiro" },
+        { "name": "Розе сухо", "price": 4, "slug": "roze-ksiro" },
+        { "name": "Червено сухо", "price": 4, "slug": "kokkino-ksiro" },
+        { "name": "Червено полусладко", "price": 4, "slug": "kokkino-imiglyko" },
+        { "name": "Червено сладко", "price": 4, "slug": "kokkino-glyko" }
+      ]
+    },
+    {
+      "title": "Рецина (500ml)",
+      "items": [
+        { "name": "Астрон", "price": 3.8, "slug": "astron" },
+        { "name": "Василики", "price": 4.3, "slug": "vasiliki" },
+        { "name": "Маламатина", "price": 3.5, "slug": "malamatina" },
+        { "name": "Георгиади", "price": 3.5, "slug": "georgiadi" },
+        { "name": "Пулиу", "price": 3.5, "slug": "pouliou" }
+      ]
     }
   ]
 } 

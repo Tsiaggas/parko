@@ -32,8 +32,8 @@ export default function MenuItemCard({ item, translations }: MenuItemCardProps) 
     if (!isExpanded && imageExists === null) {
       setImageLoading(true)
       try {
-        // Check multiple image formats
-        const extensions = ['jpg', 'jpeg', 'png', 'webp']
+        // Check multiple image formats - PNG first since we're removing backgrounds
+        const extensions = ['png', 'jpg', 'jpeg', 'webp']
         let found = false
         
         for (const ext of extensions) {
@@ -91,7 +91,7 @@ export default function MenuItemCard({ item, translations }: MenuItemCardProps) 
 
       {/* Expanded content with image */}
       {isExpanded && (
-        <div className="px-4 pb-4 border-t border-gray-100 bg-gradient-to-b from-gray-50 to-white">
+        <div className="px-4 pb-4 border-t border-stone-200/60 bg-gradient-to-b from-stone-50 to-stone-100">
           <div className="pt-4">
             {imageLoading ? (
               <div className="w-full aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg flex items-center justify-center animate-pulse">
@@ -102,11 +102,11 @@ export default function MenuItemCard({ item, translations }: MenuItemCardProps) 
               </div>
             ) : imageExists ? (
               <div 
-                className="w-full aspect-[4/3] overflow-hidden rounded-lg bg-gray-100 shadow-sm border border-gray-200"
+                className="w-full aspect-[4/3] overflow-hidden rounded-lg shadow-sm border border-stone-200/60"
                 style={{ backgroundColor: imageStyles.backgroundColor }}
               >
                 <img 
-                  src={`/images/${item.slug}.jpg`}
+                  src={`/images/${item.slug}.png`}
                   alt={item.name}
                   className="w-full h-full hover:scale-105 transition-all duration-300"
                   style={{
@@ -114,8 +114,8 @@ export default function MenuItemCard({ item, translations }: MenuItemCardProps) 
                     objectPosition: imageStyles.objectPosition
                   }}
                   onError={(e) => {
-                    // Try other formats if jpg fails
-                    const extensions = ['jpeg', 'png', 'webp']
+                    // Try other formats if png fails
+                    const extensions = ['jpg', 'jpeg', 'webp']
                     const img = e.target as HTMLImageElement
                     let currentIndex = 0
                     
@@ -133,13 +133,13 @@ export default function MenuItemCard({ item, translations }: MenuItemCardProps) 
                 />
               </div>
             ) : (
-              <div className="w-full aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex flex-col items-center justify-center text-gray-500 border border-gray-200">
+              <div className="w-full aspect-[4/3] bg-gradient-to-br from-stone-100 to-stone-200 rounded-lg flex flex-col items-center justify-center text-gray-500 border border-stone-200/60">
                 <div className="text-5xl mb-3 opacity-50">📷</div>
                 <div className="text-sm text-center font-medium">
                   {translations.noPhoto}
                 </div>
                 <div className="text-xs text-gray-400 mt-1">
-                  {item.slug}.jpg
+                  {item.slug}.png
                 </div>
               </div>
             )}

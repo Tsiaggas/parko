@@ -10,17 +10,18 @@ interface ImageAdjustments {
 
 // Custom image adjustments for specific dishes
 export const imageAdjustments: ImageAdjustments = {
-  // Πικάντικη σαλάτα - κατέβασμα του πιάτου για καλύτερη θέαση
+  // Πικάντικη σαλάτα - τώρα χρησιμοποιεί contain με warm background
   'pikantiki': {
-    objectPosition: 'center 20%',
-    objectFit: 'cover'
+    objectPosition: 'center center',
+    objectFit: 'contain',
+    backgroundColor: '#fefcf7'
   },
   
-  // Φλωρίνης γεμιστή - zoom out για κάθετο προϊόν
+  // Φλωρίνης γεμιστή - παραμένει contain με warm background
   'florinis-gemisti': {
     objectPosition: 'center center',
     objectFit: 'contain',
-    backgroundColor: '#f9fafb' // Light gray background για contain
+    backgroundColor: '#fefcf7'
   }
 }
 
@@ -28,6 +29,7 @@ export const imageAdjustments: ImageAdjustments = {
 export const getImageStyles = (slug: string): ImageAdjustment => {
   return imageAdjustments[slug] || {
     objectPosition: 'center center',
-    objectFit: 'cover'
+    objectFit: 'contain',
+    backgroundColor: '#fefcf7' // Very light cream/warm tone that matches the UI
   }
 } 
