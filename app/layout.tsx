@@ -5,7 +5,11 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Ψηφιακό Μενού - Ψητοπωλείο το Πάρκο',
   description: 'Ψηφιακό μενού ψητοπωλείου το Πάρκο',
-  viewport: 'width=device-width, initial-scale=1',
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
