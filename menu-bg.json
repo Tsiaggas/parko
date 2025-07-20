@@ -1,0 +1,51 @@
+{
+  "categories": [
+    {
+      "title": "Месо на скара",
+      "items": [
+        { "name": "Сувлаки", "price": 1.8, "slug": "souvlaki" },
+        { "name": "Суджукачки", "price": 1.8, "slug": "soutzoukaki" },
+        { "name": "Пилешко сувлаки", "price": 2, "slug": "kotosouvlaki" },
+        { "name": "Панцета", "price": 1.8, "slug": "panseta" },
+        { "name": "Свинско котлетче", "price": 2, "slug": "brizolaki-xoirino" },
+        { "name": "Наденица Тзоумагяс", "price": 1.7, "slug": "loukaniko-tzoumagias" },
+        { "name": "Цяло пиле на скара", "price": 14, "slug": "kotopoulo-sxaras-olokliro" },
+        { "name": "Половин пиле на скара", "price": 7.5, "slug": "kotopoulo-sxaras-miso" }
+      ]
+    },
+    {
+      "title": "Предястия",
+      "items": [
+        { "name": "Пържени тиквички", "price": 4, "slug": "kolokythakia-tiganita" },
+        { "name": "Печен патладжан", "price": 4.2, "slug": "melitzana-psiti" },
+        { "name": "Пълнена червена чушка", "price": 3, "slug": "florinis-gemisti" },
+        { "name": "Пържени калмари", "price": 8.5, "slug": "kalamarakia-tiganita" },
+        { "name": "Скумрия", "price": 4, "slug": "skoumpri" },
+        { "name": "Фета", "price": 3, "slug": "feta" },
+        { "name": "Печена фета", "price": 3.4, "slug": "feta-psiti" },
+        { "name": "Фета бомба", "price": 3.5, "slug": "feta-bomba" },
+        { "name": "Сиренени крокети", "price": 3.8, "slug": "kaserokroketes" },
+        { "name": "Пържени картофи", "price": 3.5, "slug": "patata-tiganiti" },
+        { "name": "Картофи суфле", "price": 4.2, "slug": "patata-soufle" },
+        { "name": "Пиперки бакалийски", "price": 3.4, "slug": "piperies-bakaliikes" },
+        { "name": "Дзадзики", "price": 3, "slug": "tzatziki" },
+        { "name": "Пикантно сирене дип", "price": 3.4, "slug": "tyrokayteri" },
+        { "name": "Паприка дип", "price": 3.5, "slug": "paprika" },
+        { "name": "Люта чушка", "price": 1.5, "slug": "kayteri-piperia" },
+        { "name": "Хляб", "price": 0.6, "slug": "psomi" },
+        { "name": "Ладопита", "price": 0.6, "slug": "ladopita" }
+      ]
+    },
+    {
+      "title": "Салати",
+      "items": [
+        { "name": "Краставици и домати", "price": 3.8, "slug": "aggourodomata" },
+        { "name": "Пикантна салата", "price": 3.4, "slug": "pikantiki" },
+        { "name": "Гръцка салата", "price": 5.8, "slug": "xoriatiki" },
+        { "name": "Рукола и маруля", "price": 6, "slug": "roka-marouli" },
+        { "name": "Салата от цвекло", "price": 4, "slug": "pantzari" },
+        { "name": "Дива зеленина", "price": 4.2, "slug": "xorta" }
+      ]
+    }
+  ]
+} 
