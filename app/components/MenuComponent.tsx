@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, Dispatch, SetStateAction } from 'react'
 import MenuItemCard from './MenuItemCard'
 import LanguageToggle from './LanguageToggle'
 import Footer from './Footer'
@@ -18,8 +18,8 @@ interface Category {
 
 interface MenuComponentProps {
   categories: Category[]
-  language: 'el' | 'en'
-  setLanguage: (lang: 'el' | 'en') => void
+  language: 'el' | 'en' | 'bg'
+  setLanguage: Dispatch<SetStateAction<'el' | 'en' | 'bg'>>
   translations: {
     title: string
     subtitle: string

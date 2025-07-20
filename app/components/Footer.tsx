@@ -1,7 +1,7 @@
 'use client'
 
 interface FooterProps {
-  language: string
+  language: 'el' | 'en' | 'bg'
 }
 
 export default function Footer({ language }: FooterProps) {

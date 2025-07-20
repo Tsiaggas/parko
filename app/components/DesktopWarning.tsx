@@ -3,7 +3,7 @@
 import Footer from './Footer'
 
 interface DesktopWarningProps {
-  language: string
+  language: 'el' | 'en' | 'bg'
   translations: {
     desktopWarning: {
       title: string

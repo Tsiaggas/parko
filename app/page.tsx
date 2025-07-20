@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import menuData from '../menu.json'
 import menuDataEn from '../menu-en.json'
+import menuDataBg from '../menu-bg.json'
 import MenuComponent from './components/MenuComponent'
 import DesktopWarning from './components/DesktopWarning'
 import { translations } from '../translations'
@@ -21,7 +22,7 @@ interface Category {
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
-  const [language, setLanguage] = useState<'el' | 'en'>('el')
+  const [language, setLanguage] = useState<'el' | 'en' | 'bg'>('el')
 
   useEffect(() => {
     const checkDevice = () => {
@@ -38,7 +39,7 @@ export default function Home() {
     return () => window.removeEventListener('resize', checkDevice)
   }, [])
 
-  const currentMenuData = language === 'el' ? menuData : menuDataEn
+  const currentMenuData = language === 'el' ? menuData : language === 'en' ? menuDataEn : menuDataBg
   const t = translations[language]
 
   if (isLoading) {

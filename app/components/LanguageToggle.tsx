@@ -1,8 +1,10 @@
 'use client'
 
+import { Dispatch, SetStateAction } from 'react'
+
 interface LanguageToggleProps {
-  language: 'el' | 'en'
-  setLanguage: (lang: 'el' | 'en') => void
+  language: 'el' | 'en' | 'bg'
+  setLanguage: Dispatch<SetStateAction<'el' | 'en' | 'bg'>>
 }
 
 export default function LanguageToggle({ language, setLanguage }: LanguageToggleProps) {
@@ -27,6 +29,16 @@ export default function LanguageToggle({ language, setLanguage }: LanguageToggle
         }`}
       >
         🇬🇧 EN
+      </button>
+      <button
+        onClick={() => setLanguage('bg')}
+        className={`px-3 py-1 rounded-full text-sm font-medium transition-all ${
+          language === 'bg'
+            ? 'bg-warm-orange text-white shadow-sm'
+            : 'text-gray-600 hover:text-gray-800'
+        }`}
+      >
+        🇧🇬 BG
       </button>
     </div>
   )

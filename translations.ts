@@ -20,6 +20,7 @@ interface Translation {
 interface Translations {
   el: Translation
   en: Translation
+  bg: Translation
 }
 
 export const translations: Translations = {
@@ -53,6 +54,22 @@ export const translations: Translations = {
       instruction: "Please open this page from your mobile phone or tablet.",
       contact: "For more information:",
       phone: "Contact us"
+    }
+  },
+  bg: {
+    title: "🔥 Грил Хаус То Парко",
+    subtitle: "Дигитално Меню",
+    loading: "Зареждане...",
+    allCategories: "Всички",
+    noPhoto: "Няма снимка",
+    loadingImage: "Зареждане на изображение...",
+    desktopWarning: {
+      title: "Дигитално Меню",
+      subtitle: "Грил Хаус То Парко",
+      message: "Това меню е достъпно само на мобилни устройства.",
+      instruction: "Моля, отворете страницата от вашия мобилен телефон или таблет.",
+      contact: "За повече информация:",
+      phone: "Свържете се с нас"
     }
   }
 } 
