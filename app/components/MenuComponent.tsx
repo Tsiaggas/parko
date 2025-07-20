@@ -18,12 +18,14 @@ interface Category {
 
 interface MenuComponentProps {
   categories: Category[]
-  language: string
-  setLanguage: (lang: string) => void
+  language: 'el' | 'en'
+  setLanguage: (lang: 'el' | 'en') => void
   translations: {
     title: string
     subtitle: string
     allCategories: string
+    noPhoto: string
+    loadingImage: string
   }
 }
 
@@ -93,10 +95,13 @@ export default function MenuComponent({ categories, language, setLanguage, trans
             </h2>
             <div className="space-y-3">
               {category.items.map(item => (
-                <MenuItemCard 
-                  key={item.slug} 
-                  item={item} 
-                  translations={translations}
+                <MenuItemCard
+                  key={item.slug}
+                  item={item}
+                  translations={{
+                    noPhoto: translations.noPhoto,
+                    loadingImage: translations.loadingImage,
+                  }}
                 />
               ))}
             </div>

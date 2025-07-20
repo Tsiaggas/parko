@@ -1,8 +1,8 @@
 'use client'
 
 interface LanguageToggleProps {
-  language: string
-  setLanguage: (lang: string) => void
+  language: 'el' | 'en'
+  setLanguage: (lang: 'el' | 'en') => void
 }
 
 export default function LanguageToggle({ language, setLanguage }: LanguageToggleProps) {

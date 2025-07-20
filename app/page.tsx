@@ -21,7 +21,7 @@ interface Category {
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
-  const [language, setLanguage] = useState('el')
+  const [language, setLanguage] = useState<'el' | 'en'>('el')
 
   useEffect(() => {
     const checkDevice = () => {
