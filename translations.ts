@@ -1,4 +1,28 @@
-export const translations = {
+interface DesktopWarningTranslations {
+  title: string
+  subtitle: string
+  message: string
+  instruction: string
+  contact: string
+  phone: string
+}
+
+interface Translation {
+  title: string
+  subtitle: string
+  loading: string
+  allCategories: string
+  noPhoto: string
+  loadingImage: string
+  desktopWarning: DesktopWarningTranslations
+}
+
+interface Translations {
+  el: Translation
+  en: Translation
+}
+
+export const translations: Translations = {
   el: {
     title: "🔥 Ψητοπωλείο το Πάρκο",
     subtitle: "Ψηφιακό Μενού",

@@ -20,7 +20,11 @@ interface MenuComponentProps {
   categories: Category[]
   language: string
   setLanguage: (lang: string) => void
-  translations: any
+  translations: {
+    title: string
+    subtitle: string
+    allCategories: string
+  }
 }
 
 export default function MenuComponent({ categories, language, setLanguage, translations }: MenuComponentProps) {

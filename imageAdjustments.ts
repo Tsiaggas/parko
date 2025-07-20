@@ -1,5 +1,15 @@
+interface ImageAdjustment {
+  objectPosition: string
+  objectFit: 'cover' | 'contain' | 'fill' | 'scale-down' | 'none'
+  backgroundColor?: string
+}
+
+interface ImageAdjustments {
+  [slug: string]: ImageAdjustment
+}
+
 // Custom image adjustments for specific dishes
-export const imageAdjustments = {
+export const imageAdjustments: ImageAdjustments = {
   // Πικάντικη σαλάτα - κατέβασμα του πιάτου για καλύτερη θέαση
   'pikantiki': {
     objectPosition: 'center 20%',
@@ -15,7 +25,7 @@ export const imageAdjustments = {
 }
 
 // Helper function to get image styles
-export const getImageStyles = (slug) => {
+export const getImageStyles = (slug: string): ImageAdjustment => {
   return imageAdjustments[slug] || {
     objectPosition: 'center center',
     objectFit: 'cover'

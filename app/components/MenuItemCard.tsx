@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { getImageStyles } from '../../imageAdjustments.js'
+import { getImageStyles } from '../../imageAdjustments'
 
 interface MenuItem {
   name: string
@@ -11,7 +11,10 @@ interface MenuItem {
 
 interface MenuItemCardProps {
   item: MenuItem
-  translations: any
+  translations: {
+    noPhoto: string
+    loadingImage: string
+  }
 }
 
 export default function MenuItemCard({ item, translations }: MenuItemCardProps) {

@@ -4,7 +4,16 @@ import Footer from './Footer'
 
 interface DesktopWarningProps {
   language: string
-  translations: any
+  translations: {
+    desktopWarning: {
+      title: string
+      subtitle: string
+      message: string
+      instruction: string
+      contact: string
+      phone: string
+    }
+  }
 }
 
 export default function DesktopWarning({ language, translations }: DesktopWarningProps) {

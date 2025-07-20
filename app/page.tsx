@@ -5,7 +5,7 @@ import menuData from '../menu.json'
 import menuDataEn from '../menu-en.json'
 import MenuComponent from './components/MenuComponent'
 import DesktopWarning from './components/DesktopWarning'
-import { translations } from '../translations.js'
+import { translations } from '../translations'
 
 interface MenuItem {
   name: string
