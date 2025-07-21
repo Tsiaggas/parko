@@ -44,8 +44,12 @@ export default function Home() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-warm-cream flex items-center justify-center">
-        <div className="text-warm-brown text-xl">{t.loading}</div>
+      <div className="min-h-screen bg-greek-gradient flex items-center justify-center p-6">
+        <div className="card-premium p-8 text-center max-w-sm mx-auto">
+          <div className="loading-shimmer w-16 h-16 rounded-full mx-auto mb-4"></div>
+          <div className="text-elegant text-2xl text-olive-700 mb-2">{t.loading}</div>
+          <div className="text-olive-500 text-sm">Φόρτωση μενού...</div>
+        </div>
       </div>
     )
   }
@@ -55,13 +59,39 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-warm-cream">
+    <div className="min-h-screen bg-greek-gradient">
+      {/* Decorative Header */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-terracotta-100/30 via-transparent to-aegean-100/30"></div>
+        <div className="relative px-4 py-8 text-center">
+          <div className="inline-flex items-center gap-3 mb-4">
+            <div className="w-2 h-8 bg-gradient-to-b from-terracotta-400 to-sunset-500 rounded-full"></div>
+            <h1 className="text-elegant text-3xl text-olive-800 font-semibold">
+              Ψητοπωλείο το Πάρκο
+            </h1>
+            <div className="w-2 h-8 bg-gradient-to-b from-sunset-500 to-terracotta-400 rounded-full"></div>
+          </div>
+          <p className="text-olive-600 text-lg font-light max-w-md mx-auto leading-relaxed">
+            Γεύσεις που ξυπνούν αναμνήσεις, φτιαγμένες με αγάπη και παράδοση
+          </p>
+        </div>
+      </div>
+
       <MenuComponent 
         categories={currentMenuData.categories as Category[]} 
         language={language}
         setLanguage={setLanguage}
         translations={t}
       />
+      
+      {/* Elegant Footer */}
+      <div className="mt-12 pb-8 px-4 text-center">
+        <div className="inline-flex items-center gap-2 text-olive-500 text-sm">
+          <div className="w-12 h-px bg-gradient-to-r from-transparent to-olive-300"></div>
+          <span className="font-light">Καλή σας όρεξη</span>
+          <div className="w-12 h-px bg-gradient-to-l from-transparent to-olive-300"></div>
+        </div>
+      </div>
     </div>
   )
 } 
