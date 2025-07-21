@@ -148,6 +148,180 @@ h3 {
   background: linear-gradient(180deg, #ea580c, #c2410c);
 }
 
+/* 🔥 GRILL FIRE ANIMATIONS 🔥 */
+@keyframes fire1 {
+  0%, 100% { 
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.8;
+  }
+  25% { 
+    transform: scale(1.1) rotate(1deg);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(0.9) rotate(-2deg);
+    opacity: 0.9;
+  }
+  75% { 
+    transform: scale(1.05) rotate(1.5deg);
+    opacity: 0.95;
+  }
+}
+
+@keyframes fire2 {
+  0%, 100% { 
+    transform: scale(0.9) rotate(1deg);
+    opacity: 0.7;
+  }
+  33% { 
+    transform: scale(1.2) rotate(-1deg);
+    opacity: 0.9;
+  }
+  66% { 
+    transform: scale(0.8) rotate(2deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fire3 {
+  0%, 100% { 
+    transform: scale(1.1) rotate(-0.5deg);
+    opacity: 0.6;
+  }
+  40% { 
+    transform: scale(0.85) rotate(1deg);
+    opacity: 0.8;
+  }
+  80% { 
+    transform: scale(1.15) rotate(-1deg);
+    opacity: 0.7;
+  }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+@keyframes glow {
+  0%, 100% { 
+    filter: brightness(1) saturate(1);
+  }
+  50% { 
+    filter: brightness(1.2) saturate(1.3);
+  }
+}
+
+/* Fire Elements */
+.fire-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.fire-flame {
+  position: absolute;
+  bottom: -20px;
+  width: 60px;
+  height: 80px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background: radial-gradient(circle at 50% 80%, 
+    #ff4500 0%, 
+    #ff6b35 30%, 
+    #ffa500 60%, 
+    rgba(255, 165, 0, 0.8) 80%, 
+    transparent 100%);
+  filter: blur(1px);
+}
+
+.fire-flame:nth-child(1) {
+  left: 15%;
+  animation: fire1 2.5s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.fire-flame:nth-child(2) {
+  left: 35%;
+  animation: fire2 2.8s ease-in-out infinite;
+  animation-delay: 0.5s;
+  transform: scale(0.8);
+}
+
+.fire-flame:nth-child(3) {
+  left: 55%;
+  animation: fire3 2.2s ease-in-out infinite;
+  animation-delay: 1s;
+  transform: scale(1.2);
+}
+
+.fire-flame:nth-child(4) {
+  left: 75%;
+  animation: fire1 2.6s ease-in-out infinite;
+  animation-delay: 1.5s;
+  transform: scale(0.9);
+}
+
+/* Fire Glow Effect */
+.fire-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 69, 0, 0.1) 0%,
+    rgba(255, 107, 53, 0.15) 25%,
+    rgba(255, 165, 0, 0.1) 50%,
+    rgba(255, 107, 53, 0.15) 75%,
+    rgba(255, 69, 0, 0.1) 100%
+  );
+  animation: glow 3s ease-in-out infinite;
+  border-radius: inherit;
+}
+
+/* Ember Particles */
+.ember {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #ffa500;
+  border-radius: 50%;
+  animation: float-up 4s linear infinite;
+  opacity: 0;
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-40px) translateX(10px);
+  }
+  100% {
+    transform: translateY(-80px) translateX(-5px);
+    opacity: 0;
+  }
+}
+
+.ember:nth-child(1) { left: 20%; animation-delay: 0s; }
+.ember:nth-child(2) { left: 40%; animation-delay: 1s; }
+.ember:nth-child(3) { left: 60%; animation-delay: 2s; }
+.ember:nth-child(4) { left: 80%; animation-delay: 3s; }
+
+/* Header Fire Container */
+.header-with-fire {
+  position: relative;
+  background: linear-gradient(135deg, 
+    #fef7ed 0%, 
+    #fff8f5 30%, 
+    #feebc8 60%, 
+    #fed7aa 100%
+  );
+  animation: flicker 4s ease-in-out infinite;
+}
+
 /* Responsive Design Enhancements */
 @media (max-width: 640px) {
   .card-premium {
@@ -160,5 +334,16 @@ h3 {
   
   h2 {
     @apply text-2xl;
+  }
+  
+  /* Mobile Fire Adjustments */
+  .fire-flame {
+    width: 40px;
+    height: 60px;
+  }
+  
+  .ember {
+    width: 2px;
+    height: 2px;
   }
 } 

@@ -108,6 +108,7 @@ export default function MenuComponent({ categories, language, setLanguage, trans
                   <MenuItemCard
                     item={item}
                     index={itemIndex}
+                    category={category.title}
                     translations={{
                       noPhoto: translations.noPhoto,
                       loadingImage: translations.loadingImage,

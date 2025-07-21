@@ -27,7 +27,7 @@
         { "name": "Κασεροκροκέτες", "price": 3.8, "slug": "kaserokroketes" },
         { "name": "Πατάτα τηγανητή", "price": 3.5, "slug": "patata-tiganiti" },
         { "name": "Πατάτα σουφλέ", "price": 4.2, "slug": "patata-soufle" },
-        { "name": "Πιπεριές μπακάλικες", "price": 3.4, "slug": "piperies-bakaliikes" },
+        { "name": "Πιπεριές μπακάλικες", "price": 3.8, "slug": "piperies-bakaliikes" },
         { "name": "Τζατζίκι", "price": 3, "slug": "tzatziki" },
         { "name": "Τυροκαυτερή", "price": 3.4, "slug": "tyrokayteri" },
         { "name": "Πάπρικα", "price": 3.5, "slug": "paprika" },

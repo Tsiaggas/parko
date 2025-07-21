@@ -27,7 +27,7 @@
         { "name": "Сиренени крокети", "price": 3.8, "slug": "kaserokroketes" },
         { "name": "Пържени картофи", "price": 3.5, "slug": "patata-tiganiti" },
         { "name": "Картофи суфле", "price": 4.2, "slug": "patata-soufle" },
-        { "name": "Пиперки бакалийски", "price": 3.4, "slug": "piperies-bakaliikes" },
+        { "name": "Пиперки бакалийски", "price": 3.8, "slug": "piperies-bakaliikes" },
         { "name": "Дзадзики", "price": 3, "slug": "tzatziki" },
         { "name": "Пикантно сирене дип", "price": 3.4, "slug": "tyrokayteri" },
         { "name": "Паприка дип", "price": 3.5, "slug": "paprika" },

@@ -27,7 +27,7 @@
         { "name": "Cheese Croquettes", "price": 3.8, "slug": "kaserokroketes" },
         { "name": "French Fries", "price": 3.5, "slug": "patata-tiganiti" },
         { "name": "Soufflé Potatoes", "price": 4.2, "slug": "patata-soufle" },
-        { "name": "Pickled Peppers", "price": 3.4, "slug": "piperies-bakaliikes" },
+        { "name": "Pickled Peppers", "price": 3.8, "slug": "piperies-bakaliikes" },
         { "name": "Tzatziki", "price": 3, "slug": "tzatziki" },
         { "name": "Spicy Cheese Dip", "price": 3.4, "slug": "tyrokayteri" },
         { "name": "Paprika Dip", "price": 3.5, "slug": "paprika" },

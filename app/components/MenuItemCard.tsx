@@ -13,13 +13,14 @@ interface MenuItem {
 interface MenuItemCardProps {
   item: MenuItem
   index?: number // Add index for priority loading
+  category?: string // Add category for drink-specific styling
   translations: {
     noPhoto: string
     loadingImage: string
   }
 }
 
-export default function MenuItemCard({ item, index = 0, translations }: MenuItemCardProps) {
+export default function MenuItemCard({ item, index = 0, category = '', translations }: MenuItemCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
   const [imageExists, setImageExists] = useState<boolean | null>(null)
   const [imageLoading, setImageLoading] = useState(false)
@@ -27,6 +28,11 @@ export default function MenuItemCard({ item, index = 0, translations }: MenuItem
   
   // Get custom image styles for this item
   const imageStyles = getImageStyles(item.slug)
+  
+  // Check if this is a drink category
+  const isDrink = ['Μπύρες', 'Αναψυκτικά', 'Τσίπουρο', 'Ούζο', 'Κρασί', 'Ρετσίνα'].some(drinkKeyword => 
+    category.includes(drinkKeyword)
+  )
 
   const toggleExpanded = async () => {
     setIsExpanded(!isExpanded)
@@ -79,7 +85,9 @@ export default function MenuItemCard({ item, index = 0, translations }: MenuItem
             {/* Subtle description line */}
             <div className="mt-1 flex items-center gap-2">
               <div className="w-6 h-px bg-gradient-to-r from-terracotta-300 to-transparent"></div>
-              <span className="text-xs text-olive-500 font-light tracking-wide">🍽️</span>
+              <span className="text-xs text-olive-500 font-light tracking-wide">
+                {isDrink ? '🍻' : '🍽️'}
+              </span>
             </div>
           </div>
           
@@ -110,7 +118,9 @@ export default function MenuItemCard({ item, index = 0, translations }: MenuItem
               <div className="w-3 h-3 bg-terracotta-400 rounded-full"></div>
               <div className="w-2 h-2 bg-mediterranean-400 rounded-full"></div>
             </div>
-            <span className="text-elegant text-lg text-olive-700 font-medium">Εικόνα πιάτου</span>
+            <span className="text-elegant text-lg text-olive-700 font-medium">
+              {isDrink ? 'Εικόνα ποτού' : 'Εικόνα πιάτου'}
+            </span>
             <div className="flex-1 h-px bg-gradient-to-r from-olive-200 to-transparent"></div>
           </div>
 
@@ -157,21 +167,7 @@ export default function MenuItemCard({ item, index = 0, translations }: MenuItem
                     }
                   }}
                 />
-                
-                {/* Premium Image Badge */}
-                <div className="absolute top-4 right-4 z-20">
-                  <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full border border-olive-200/50 shadow-soft">
-                    <span className="text-xs text-olive-600 font-medium">HD</span>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Image Caption */}
-              <div className="mt-3 text-center">
-                <div className="text-olive-600 text-sm font-light italic">
-                  {item.name} - Φρέσκο και νόστιμο
-                </div>
-              </div>
+                              </div>
             </div>
           ) : (
             <div className="w-full aspect-[4/3] bg-gradient-to-br from-olive-50 via-aegean-50 to-mediterranean-50 rounded-2xl flex flex-col items-center justify-center shadow-soft border-2 border-olive-100/30">
@@ -189,13 +185,15 @@ export default function MenuItemCard({ item, index = 0, translations }: MenuItem
           )}
           
           {/* Bottom decoration */}
-          <div className="flex justify-center mt-6 pt-4 border-t border-olive-100/30">
-            <div className="flex items-center gap-2 text-olive-400">
-              <div className="w-8 h-px bg-gradient-to-r from-transparent to-olive-200"></div>
-              <span className="text-xs font-light">Φτιαγμένο με αγάπη</span>
-              <div className="w-8 h-px bg-gradient-to-l from-transparent to-olive-200"></div>
+          {!isDrink && (
+            <div className="flex justify-center mt-6 pt-4 border-t border-olive-100/30">
+              <div className="flex items-center gap-2 text-olive-400">
+                <div className="w-8 h-px bg-gradient-to-r from-transparent to-olive-200"></div>
+                <span className="text-xs font-light">Φτιαγμένο με αγάπη</span>
+                <div className="w-8 h-px bg-gradient-to-l from-transparent to-olive-200"></div>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       )}
     </div>
