@@ -38,43 +38,41 @@ export default function MenuComponent({ categories, language, setLanguage, trans
 
   return (
     <div className="min-h-screen bg-greek-gradient">
-      {/* Ultra-Compact Mobile Header */}
+      {/* Perfect Mobile Header Layout */}
       <div className="sticky top-0 bg-gradient-to-r from-white/90 via-olive-50/80 to-white/90 backdrop-blur-md z-20 shadow-mediterranean border-b border-white/20">
-        <div className="px-3 py-3">
-          <div className="flex justify-between items-center gap-2">
-            {/* Category Filters - Full Width */}
-            <div className="flex-1">
-              <div className="flex flex-wrap gap-1.5 justify-center">
+        <div className="px-3 py-3 space-y-3">
+          {/* Language Toggle - Top Row */}
+          <div className="flex justify-center">
+            <LanguageToggle language={language} setLanguage={setLanguage} />
+          </div>
+          
+          {/* Category Filters - Bottom Row - Horizontal Flex */}
+          <div className="overflow-x-auto">
+            <div className="flex gap-2 justify-start min-w-max px-1">
+              <button
+                onClick={() => setSelectedCategory('all')}
+                className={`group relative overflow-hidden px-4 py-2 rounded-full font-medium text-xs transition-all duration-300 whitespace-nowrap ${
+                  selectedCategory === 'all'
+                    ? 'bg-gradient-to-r from-terracotta-500 to-sunset-500 text-white shadow-warm scale-105'
+                    : 'bg-white/80 backdrop-blur-sm text-olive-700 hover:bg-white hover:text-olive-800 shadow-soft hover:scale-105 border border-olive-200/50'
+                }`}
+              >
+                <span className="relative z-10">{translations.allCategories}</span>
+              </button>
+              
+              {categories.map((category) => (
                 <button
-                  onClick={() => setSelectedCategory('all')}
-                  className={`group relative overflow-hidden px-3 py-2 rounded-full font-medium text-xs transition-all duration-300 ${
-                    selectedCategory === 'all'
+                  key={category.title}
+                  onClick={() => setSelectedCategory(category.title)}
+                  className={`group relative overflow-hidden px-4 py-2 rounded-full font-medium text-xs transition-all duration-300 whitespace-nowrap ${
+                    selectedCategory === category.title
                       ? 'bg-gradient-to-r from-terracotta-500 to-sunset-500 text-white shadow-warm scale-105'
                       : 'bg-white/80 backdrop-blur-sm text-olive-700 hover:bg-white hover:text-olive-800 shadow-soft hover:scale-105 border border-olive-200/50'
                   }`}
                 >
-                  <span className="relative z-10">{translations.allCategories}</span>
+                  <span className="relative z-10">{category.title}</span>
                 </button>
-                
-                {categories.map((category) => (
-                  <button
-                    key={category.title}
-                    onClick={() => setSelectedCategory(category.title)}
-                    className={`group relative overflow-hidden px-3 py-2 rounded-full font-medium text-xs transition-all duration-300 ${
-                      selectedCategory === category.title
-                        ? 'bg-gradient-to-r from-terracotta-500 to-sunset-500 text-white shadow-warm scale-105'
-                        : 'bg-white/80 backdrop-blur-sm text-olive-700 hover:bg-white hover:text-olive-800 shadow-soft hover:scale-105 border border-olive-200/50'
-                    }`}
-                  >
-                    <span className="relative z-10 whitespace-nowrap">{category.title}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-            
-            {/* Language Toggle - Right Side */}
-            <div className="flex-shrink-0 ml-2">
-              <LanguageToggle language={language} setLanguage={setLanguage} />
+              ))}
             </div>
           </div>
         </div>
