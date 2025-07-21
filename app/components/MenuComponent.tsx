@@ -94,10 +94,11 @@ export default function MenuComponent({ categories, language, setLanguage, trans
               {category.title}
             </h2>
             <div className="space-y-3">
-              {category.items.map(item => (
+              {category.items.map((item, itemIndex) => (
                 <MenuItemCard
                   key={item.slug}
                   item={item}
+                  index={itemIndex}
                   translations={{
                     noPhoto: translations.noPhoto,
                     loadingImage: translations.loadingImage,

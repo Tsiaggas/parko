@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { getImageStyles } from '../../imageAdjustments'
 
 interface MenuItem {
@@ -11,16 +12,18 @@ interface MenuItem {
 
 interface MenuItemCardProps {
   item: MenuItem
+  index?: number // Add index for priority loading
   translations: {
     noPhoto: string
     loadingImage: string
   }
 }
 
-export default function MenuItemCard({ item, translations }: MenuItemCardProps) {
+export default function MenuItemCard({ item, index = 0, translations }: MenuItemCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
   const [imageExists, setImageExists] = useState<boolean | null>(null)
   const [imageLoading, setImageLoading] = useState(false)
+  const [currentImageSrc, setCurrentImageSrc] = useState(`/images/${item.slug}.png`)
   
   // Get custom image styles for this item
   const imageStyles = getImageStyles(item.slug)
@@ -102,33 +105,34 @@ export default function MenuItemCard({ item, translations }: MenuItemCardProps) 
               </div>
             ) : imageExists ? (
               <div 
-                className="w-full aspect-[4/3] overflow-hidden rounded-lg shadow-sm border border-stone-200/60"
+                className="w-full aspect-[4/3] overflow-hidden rounded-lg shadow-sm border border-stone-200/60 relative"
                 style={{ backgroundColor: imageStyles.backgroundColor }}
               >
-                <img 
-                  src={`/images/${item.slug}.png`}
+                <Image
+                  src={currentImageSrc}
                   alt={item.name}
-                  className="w-full h-full hover:scale-105 transition-all duration-300"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="hover:scale-105 transition-all duration-300 object-contain"
                   style={{
-                    objectFit: imageStyles.objectFit,
                     objectPosition: imageStyles.objectPosition
                   }}
-                  onError={(e) => {
-                    // Try other formats if png fails
+                  quality={90}
+                  priority={index < 3} // Priority loading for first 3 items
+                  loading={index < 3 ? "eager" : "lazy"}
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT/9k="
+                  onError={() => {
+                    // Smart fallback - try different formats
                     const extensions = ['jpg', 'jpeg', 'webp']
-                    const img = e.target as HTMLImageElement
-                    let currentIndex = 0
+                    const currentExt = currentImageSrc.split('.').pop()
+                    const nextExt = extensions.find(ext => ext !== currentExt)
                     
-                    const tryNext = () => {
-                      if (currentIndex < extensions.length) {
-                        img.src = `/images/${item.slug}.${extensions[currentIndex]}`
-                        currentIndex++
-                      } else {
-                        setImageExists(false)
-                      }
+                    if (nextExt) {
+                      setCurrentImageSrc(`/images/${item.slug}.${nextExt}`)
+                    } else {
+                      setImageExists(false)
                     }
-                    
-                    tryNext()
                   }}
                 />
               </div>
@@ -139,7 +143,7 @@ export default function MenuItemCard({ item, translations }: MenuItemCardProps) 
                   {translations.noPhoto}
                 </div>
                 <div className="text-xs text-gray-400 mt-1">
-                  {item.slug}.png
+                  {currentImageSrc.split('/').pop()}
                 </div>
               </div>
             )}
