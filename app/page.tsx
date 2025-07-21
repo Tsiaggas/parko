@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import menuData from '../menu.json'
 import menuDataEn from '../menu-en.json'
 import menuDataBg from '../menu-bg.json'
@@ -60,18 +61,26 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-greek-gradient">
-      {/* Decorative Header */}
+      {/* Brand Banner Header */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-terracotta-100/30 via-transparent to-aegean-100/30"></div>
-        <div className="relative px-4 py-8 text-center">
+        <div className="relative px-4 py-6 text-center">
           <div className="inline-flex items-center gap-3 mb-4">
-            <div className="w-2 h-8 bg-gradient-to-b from-terracotta-400 to-sunset-500 rounded-full"></div>
-            <h1 className="text-elegant text-3xl text-olive-800 font-semibold">
-              Ψητοπωλείο το Πάρκο
-            </h1>
-            <div className="w-2 h-8 bg-gradient-to-b from-sunset-500 to-terracotta-400 rounded-full"></div>
+            <div className="w-2 h-6 bg-gradient-to-b from-terracotta-400 to-sunset-500 rounded-full"></div>
+            <div className="relative">
+              <Image
+                src="/images/parko.png"
+                alt="Ψητοπωλείο το Πάρκο"
+                width={200}
+                height={60}
+                className="object-contain max-w-full h-auto"
+                priority
+                quality={95}
+              />
+            </div>
+            <div className="w-2 h-6 bg-gradient-to-b from-sunset-500 to-terracotta-400 rounded-full"></div>
           </div>
-          <p className="text-olive-600 text-lg font-light max-w-md mx-auto leading-relaxed">
+          <p className="text-olive-600 text-base font-light max-w-md mx-auto leading-relaxed">
             Γεύσεις που ξυπνούν αναμνήσεις, φτιαγμένες με αγάπη και παράδοση
           </p>
         </div>

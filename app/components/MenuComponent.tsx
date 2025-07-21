@@ -38,54 +38,44 @@ export default function MenuComponent({ categories, language, setLanguage, trans
 
   return (
     <div className="min-h-screen bg-greek-gradient">
-      {/* Compact Mobile Header */}
+      {/* Ultra-Compact Mobile Header */}
       <div className="sticky top-0 bg-gradient-to-r from-white/90 via-olive-50/80 to-white/90 backdrop-blur-md z-20 shadow-mediterranean border-b border-white/20">
-        <div className="px-3 py-4">
+        <div className="px-3 py-3">
           <div className="flex justify-between items-center gap-2">
-            <div className="flex-1 min-w-0">
-              {/* Compact Main Title */}
-              <div className="text-center">
-                <h1 className="text-elegant text-xl font-bold text-olive-800 truncate">
-                  {translations.title}
-                </h1>
-                <p className="text-olive-600 text-xs font-light leading-tight">
-                  {translations.subtitle}
-                </p>
+            {/* Category Filters - Full Width */}
+            <div className="flex-1">
+              <div className="flex flex-wrap gap-1.5 justify-center">
+                <button
+                  onClick={() => setSelectedCategory('all')}
+                  className={`group relative overflow-hidden px-3 py-2 rounded-full font-medium text-xs transition-all duration-300 ${
+                    selectedCategory === 'all'
+                      ? 'bg-gradient-to-r from-terracotta-500 to-sunset-500 text-white shadow-warm scale-105'
+                      : 'bg-white/80 backdrop-blur-sm text-olive-700 hover:bg-white hover:text-olive-800 shadow-soft hover:scale-105 border border-olive-200/50'
+                  }`}
+                >
+                  <span className="relative z-10">{translations.allCategories}</span>
+                </button>
+                
+                {categories.map((category) => (
+                  <button
+                    key={category.title}
+                    onClick={() => setSelectedCategory(category.title)}
+                    className={`group relative overflow-hidden px-3 py-2 rounded-full font-medium text-xs transition-all duration-300 ${
+                      selectedCategory === category.title
+                        ? 'bg-gradient-to-r from-terracotta-500 to-sunset-500 text-white shadow-warm scale-105'
+                        : 'bg-white/80 backdrop-blur-sm text-olive-700 hover:bg-white hover:text-olive-800 shadow-soft hover:scale-105 border border-olive-200/50'
+                    }`}
+                  >
+                    <span className="relative z-10 whitespace-nowrap">{category.title}</span>
+                  </button>
+                ))}
               </div>
             </div>
-            <div className="flex-shrink-0">
+            
+            {/* Language Toggle - Right Side */}
+            <div className="flex-shrink-0 ml-2">
               <LanguageToggle language={language} setLanguage={setLanguage} />
             </div>
-          </div>
-        </div>
-
-        {/* Compact Category Filters */}
-        <div className="px-3 pb-3">
-          <div className="flex flex-wrap gap-1.5 justify-center">
-            <button
-              onClick={() => setSelectedCategory('all')}
-              className={`group relative overflow-hidden px-3 py-2 rounded-full font-medium text-xs transition-all duration-300 ${
-                selectedCategory === 'all'
-                  ? 'bg-gradient-to-r from-terracotta-500 to-sunset-500 text-white shadow-warm scale-105'
-                  : 'bg-white/80 backdrop-blur-sm text-olive-700 hover:bg-white hover:text-olive-800 shadow-soft hover:scale-105 border border-olive-200/50'
-              }`}
-            >
-              <span className="relative z-10">{translations.allCategories}</span>
-            </button>
-            
-            {categories.map((category) => (
-              <button
-                key={category.title}
-                onClick={() => setSelectedCategory(category.title)}
-                className={`group relative overflow-hidden px-3 py-2 rounded-full font-medium text-xs transition-all duration-300 ${
-                  selectedCategory === category.title
-                    ? 'bg-gradient-to-r from-terracotta-500 to-sunset-500 text-white shadow-warm scale-105'
-                    : 'bg-white/80 backdrop-blur-sm text-olive-700 hover:bg-white hover:text-olive-800 shadow-soft hover:scale-105 border border-olive-200/50'
-                }`}
-              >
-                <span className="relative z-10 whitespace-nowrap">{category.title}</span>
-              </button>
-            ))}
           </div>
         </div>
       </div>
