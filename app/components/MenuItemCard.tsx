@@ -78,8 +78,8 @@ export default function MenuItemCard({ item, index = 0, translations }: MenuItem
             </h3>
             {/* Subtle description line */}
             <div className="mt-1 flex items-center gap-2">
-              <div className="w-8 h-px bg-gradient-to-r from-terracotta-300 to-transparent"></div>
-              <span className="text-xs text-olive-500 font-light tracking-wide">ΠΑΡΑΔΟΣΙΑΚΌ</span>
+              <div className="w-6 h-px bg-gradient-to-r from-terracotta-300 to-transparent"></div>
+              <span className="text-xs text-olive-500 font-light tracking-wide">🍽️</span>
             </div>
           </div>
           
